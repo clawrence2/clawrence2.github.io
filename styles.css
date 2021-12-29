@@ -6,5 +6,16 @@ h1{
    margin:auto;
 }
 body{
-    background: linear-gradient(to left, teal, blue);
+    background: url("images/background-images/water.jpg");
+    background-attachment:fixed;
+  background-size:cover;
+  background-position: -0px -1200px;}
+
+.scrollme{
+    width:500px;
+    height:2000px;
+    background-color: green;
+}
+img{
+    opacity:90%;
 }
