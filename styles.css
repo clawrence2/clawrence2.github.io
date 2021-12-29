@@ -12,9 +12,11 @@ body{
   background-position: -0px -1200px;}
 
 .scrollme{
-    width:500px;
+    width:100%;
     height:2000px;
-    background-color: green;
+    margin:auto;
+    background-color: #05abab;
+    opacity:80%;
 }
 img.moon{
     opacity:100%;
