@@ -1,0 +1,52 @@
+body{
+    background-image: url("images/spamedium.jpg");
+    background-position:-100px -100px;
+    background-attachment:fixed;
+    font-family:"Roboto", sans-serif;
+    font-weight:100;
+}
+.floater{
+    max-width:400px;
+    margin:150px auto;
+    opacity:100%;
+    background-color:rgba(255, 255, 255, .99);
+    padding:10px;
+    border-radius:25px;
+    position:relative;
+    top:100px;
+
+}
+
+.floater2{
+    max-width:300px;
+    margin:150px auto;
+    opacity:100%;
+    background-color:rgba(255, 255, 255, .90);
+    padding:10px;
+    border-radius:25px;
+    position:relative;
+    top:200px;
+    margin-bottom:400px;
+ 
+
+
+}
+h1{
+    font-weight:300;
+}
+h2{
+    font-weight:100;
+}
+.floater2 li{
+    max-width:300px;
+    margin:150px auto;
+    opacity:100%;
+    background-color:rgba(255, 255, 255, .5);
+    padding:10px;
+    border-radius:25px;
+    position:relative;
+    top:200px;
+    margin-bottom:400px;
+    font-size:36px;
+
+}
