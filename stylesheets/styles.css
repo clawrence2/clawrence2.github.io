@@ -66,3 +66,13 @@ div.splash{
 html{
     background-image:url("../images/pattern.jpg");
 }
+
+a.splash{
+    text-decoration:none;
+    color:black;
+}
+
+.splash>a:visited{
+    text-decoration:none;
+    color:black;
+}
