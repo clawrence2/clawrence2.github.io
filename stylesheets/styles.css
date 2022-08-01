@@ -76,3 +76,37 @@ a.splash{
     text-decoration:none;
     color:black;
 }
+
+.container{
+    width:800px;
+    min-height:600px;
+    margin: 0 auto;
+    background-color:white;
+}
+
+.right{
+    float:right;
+    margin-right:5px;
+}
+
+.left{
+    float:left;
+}
+
+nav{
+background-color:lightgray;
+padding-right:50px;
+padding-left:50px;
+overflow:auto; /*This is because when items are floated (which all items in this nav are), 
+the nav or div or whatever container it might be in collapses. Overflow:auto restores the normal behavior*/
+}
+
+.outer-grid{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+
+.project-text1{
+    grid-column:1 /* left off trying to create a grid for projects. See grid practice files for a refresher. Flexbox within grid for alignment one grid item per project?*/
+}
