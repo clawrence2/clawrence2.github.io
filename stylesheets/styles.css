@@ -110,3 +110,4 @@ the nav or div or whatever container it might be in collapses. Overflow:auto res
 .project-text1{
     grid-column:1 /* left off trying to create a grid for projects. See grid practice files for a refresher. Flexbox within grid for alignment one grid item per project?*/
 }
+

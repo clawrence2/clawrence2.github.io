@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resolution Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/resolution-test.css">
+    </head>
+    <body>
+       
+        <div class="static-container-400px">
+           <h3>This is a static 400px element.</h3>
+            <img class="resolution-switching-static-400px"
+            src="images/red-bmw/red-bmw-400.jpg"
+            srcset="
+            images/red-bmw/red-bmw-400.jpg,
+            images/red-bmw/red-bmw-600.jpg 1.5x,
+            images/red-bmw/red-bmw-700.jpg 1.75x,
+            images/red-bmw/red-bmw-800.jpg 2x
+            ">
+        </div>
+        <a href="index.html">Go Home</a>
+        <script src="resolution-test.html" async defer></script>
+    </body>
+</html>

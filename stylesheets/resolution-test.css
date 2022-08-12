@@ -1,0 +1,24 @@
+img.resolution-switching-static-400px{
+width:400px;
+}
+
+.static-container-400px{
+    border:4px solid rgba(0, 0, 255, 0.534);
+    width:min-content;
+    background-color:rgba(46, 46, 46, 0.534);
+    margin:0 auto;
+}
+
+h3{
+    text-align:center;
+    color:white;
+    font-family:sans-serif;
+}
+
+
+
+/* goals
+1. test out resolution swtiching for a set image size (400px)
+2. test our resolution swtiching for a responsive image size (30vw)
+3. test out art direction swtiching for different vw sizes
+3. test both cases on mobile */
