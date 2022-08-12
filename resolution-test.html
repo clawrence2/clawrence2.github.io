@@ -21,6 +21,27 @@
             images/red-bmw/red-bmw-800.jpg 2x
             ">
         </div>
+        <div class="dyn-container-20vw">
+           <h3>This is a dynamic 20vw element.</h3>
+            <img class="resolution-switching-dynamic-20vw"
+            src="images/red-bmw/red-bmw-400.jpg"
+            srcset="
+            images/red-bmw/red-bmw-400.jpg,
+            images/red-bmw/red-bmw-600.jpg 1.5x,
+            images/red-bmw/red-bmw-700.jpg 1.75x,
+            images/red-bmw/red-bmw-800.jpg 2x
+            ">
+        </div>
+        <div class="art-direction-test">
+            <picture>
+                <source media="(min-width:1500px)" 
+                srcset="./images/desert-art-direction-test/desert-1920.jpg">
+                <source media="(min-width:800px)"
+                srcset="./images/desert-art-direction-test/desert-1000.jpg">
+                <source media="(min-width:400px)" srcset="./images/desert-art-direction-test/desert-500.jpg">
+                <img src="./images/desert-art-direction-test/broken-1920.jpg">
+            </picture>
+        </div>
         <a href="index.html">Go Home</a>
         <script src="resolution-test.html" async defer></script>
     </body>

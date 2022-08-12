@@ -1,6 +1,11 @@
-img.resolution-switching-static-400px{
-width:400px;
+*{
+    margin:0;
 }
+
+img{
+    width:100%;
+}
+
 
 .static-container-400px{
     border:4px solid rgba(0, 0, 255, 0.534);
@@ -9,16 +14,43 @@ width:400px;
     margin:0 auto;
 }
 
+.dyn-container-20vw{
+    border:4px solid rgba(0, 0, 255, 0.534);
+    width:20vw;
+    background-color:rgba(46, 46, 46, 0.534);
+    margin:10px auto;
+}
+
+.dyn-container-20vw>img{
+max-width:100%;
+}
+
+.dyn-container-20vw>h3{
+    font-size: 1vw;
+}
+
 h3{
     text-align:center;
     color:white;
     font-family:sans-serif;
 }
 
+.art-direction-test{
+    width:100vw;
+    border:4px solid blue;
+    box-sizing:border-box;
+}
 
+picture{
+  object-fit:cover;
+}
 
 /* goals
 1. test out resolution swtiching for a set image size (400px)
 2. test our resolution swtiching for a responsive image size (30vw)
 3. test out art direction swtiching for different vw sizes
-3. test both cases on mobile */
+    1500+
+    800+ img is 1000px, how does it scale? It will overstretch. Needs to be at least 1500
+    400+ img is 500px how does it scale?
+4. then do art switching with multiple resolutions
+5. test everything on mobile */
