@@ -12,19 +12,7 @@ function getTimeO() {
     let oSeconds = Math.floor((distance % (1000 * 60)) / 1000);
     let oTime = oDays + "d " + oHours + "h " + oMinutes + "m " + oSeconds + "s ";
     oTimer.textContent = oTime;
-    console.log(distance);
 }
-function getTimeS() {
-    let today = new Date().getTime();
-    let distance = today - sDate;
-    let sDays = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let sHours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let sMinutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let sSeconds = Math.floor((distance % (1000 * 60)) / 1000);
-    let sTime = sDays + "d " + sHours + "h " + sMinutes + "m " + sSeconds + "s ";
-    sTimer.textContent = sTime;
 
-}
 
 setInterval(getTimeO,1000);
-setInterval(getTimeS,1000);
