@@ -10,6 +10,13 @@
     url('../fonts/Inter-Thin.woff') format('woff');
     font-weight:300;
 }
+
+@media screen and (min-width: 700px){
+    .container {
+        width:500px;
+        margin: 30px auto;
+    }
+}
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
