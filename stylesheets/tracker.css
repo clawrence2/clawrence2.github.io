@@ -13,7 +13,7 @@
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 50% 50%;
+    grid-template-rows: repeat(2, minmax(min-content, 50%));
     height: 75vh;
 }
 
@@ -40,9 +40,10 @@
 .timer h2{
     font-family:"Inter";
     font-weight:900;
-    font-size:54px;
+    font-size:48px;
     text-transform:uppercase;
     letter-spacing:-2.5px;
+    padding:0 15px;
     
 }
 
