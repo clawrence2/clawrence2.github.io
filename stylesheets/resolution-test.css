@@ -51,3 +51,13 @@ img{
     300+ img is 800px how does it scale?
 4. then do art switching with multiple resolutions
 5. test everything on mobile */
+
+
+/* this is how you find out how big your image should be
+
+image is 80vw
+iphone viewport is 375
+dpr is 3
+viewport * dpr * 80vw = 900 | (375*3*.8)
+
+*/
