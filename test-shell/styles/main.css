@@ -40,13 +40,15 @@
 }
 
 body {
-    height: 100vh;
+    background-color:black;
 }
 
 
 /* MAIN STYLES */
 
-
+.accent{
+    color:var(--green-accent);
+}
 h1 {
     margin-bottom: 32px;
     font-weight: 700;
@@ -63,6 +65,20 @@ p {
     margin-bottom: 20px;
 }
 
+.button{
+    border-radius: 0;
+    font-family: inherit;
+    border: 0;
+    padding: 8px 15px;
+    border-radius: 0px;
+    word-spacing: 2px;
+    background-color: white;
+    color: var(--green-accent);
+    font-size: 26px;
+    font-weight: 700;
+    display:block;
+    text-decoration:none;
+}
 
 button {
     border-radius: 0;
@@ -138,10 +154,28 @@ nav img {
     margin-right: 60px;
 }
 
+
+nav .button{
+    margin-right:60px;
+}
+/* This next rule can be deleted once buttons are converted to a tags */
 nav button {
     margin-right: 60px;
+}
 
+nav a{
+    font-family: inherit;
+    font-size:inherit;
+    color:inherit;
+    font-weight:inherit;
+    text-decoration: none;
+}
+nav a:hover{
+    color:var(--green-accent);
+}
 
+nav a:active{
+    color:var(--green-accent);
 }
 
 /* scroll styles */
@@ -241,7 +275,15 @@ section.hero {
     margin-top: 10px;
 }
 
+/* this next rule can be deleted once buttons are converted to a */
 .lower-text button {
+    color: white;
+    width: 250px;
+    text-align: left;
+    background: url("../images/arrow.svg") no-repeat bottom 50% right 10px, var(--green-accent);
+    margin-top: 50px;
+}
+.lower-text .button {
     color: white;
     width: 250px;
     text-align: left;
@@ -297,7 +339,7 @@ section.support2 {
 
 /* SUPPORT3 */
 .support3-wrapper {
-    background: rgb(107, 107, 107);
+    background: black;
     padding-top: 100px;
 }
 
@@ -310,6 +352,7 @@ section.support3 {
 
 .support3 h2 {
     grid-column: 1/8;
+    color: var(--green-accent);
 }
 
 a.texty:hover {
@@ -323,8 +366,12 @@ a.texty {
 
 /* FOOTER */
 footer {
-    background-color: #f9f9fb;
-    color: black;
+    color: rgb(134, 134, 139);
+    font-weight:400;
+    font-size:12px;
+    margin:0 auto;
+    width:min-content;
+    white-space:nowrap;
 }
 
 /* MEDIA QUERIES */
@@ -333,6 +380,9 @@ footer {
         font-size:75px;
     }
     
+    .main-nav .button{
+        display:none;
+    }
     .nav-left ul {
         display: none;
     }
@@ -425,3 +475,6 @@ you use srcset on background-image? */
 /* fix fixed scroll DONE*/
 /* Add scroll function to nav bar, hide on scroll down, show on scroll up */
 /* Make nav reappear at a certain point */
+
+
+/* test */

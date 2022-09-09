@@ -13,18 +13,18 @@ function nav() {
 }
 
 //SCROLL TOGGLE
-// const navFixed = document.querySelector('nav');
-// navFixed.addEventListener('click', showNav);
+const navFixed = document.querySelector('nav');
+navFixed.addEventListener('click', showNav);
 
 
-// function hideNav(){
-//     navFixed.classList.toggle('scroll-down');
-//     console.log("fired");
-// }
+function hideNav(){
+    navFixed.classList.toggle('scroll-down');
+    console.log("fired");
+}
 
-// function showNav(){
-//     navFixed.classList.toggle('scroll-up');
-// }
+function showNav(){
+    navFixed.classList.toggle('scroll-up');
+}
 
 // const scrollUp = "scroll-up";
 // const scrollDown = "scroll-down";
