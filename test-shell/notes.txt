@@ -1,0 +1,35 @@
+Upgrades:
+
+1. Animate hamburger bar DONE 
+2. Make nav bar go away when scrolling :-(  Or don't, not a big deal
+3. Design and Add footer DONE
+4. Make form work
+5. Customize backgroud images to load faster. 
+6. Check how home page loads withotu background. Set default backgroudn color to black. 
+7. Add pictures on right side of home page list items
+8. Gradietn on Let's get started text home page, verizon style color wheel.
+9.Remove get in touch button on contact page
+10. animate buttons
+11. add more content
+12. add anchor tags to logo 
+13. make favicon
+14. Add space after three cards on What's included page.
+15. Fix spacing on home page
+16. PROOFREAD EVERYTHING!
+
+Page Layout
+MAIN 
+1. intro
+2. what we do
+3. services
+
+
+
+max-width means <
+
+min width means >
+
+x >600px and x <1075px
+
+min width 600px max width 1075px
+
