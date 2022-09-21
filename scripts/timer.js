@@ -1,5 +1,5 @@
 const oDate = new Date("Aug 18, 2022 23:00:00").getTime();
-const sDate = new Date("Sep 18, 2022 16:00:00").getTime();
+const sDate = new Date("Sep 20, 2022 00:00:00").getTime();
 const oTimer = document.querySelector("#oTimer");
 const sTimer = document.querySelector("#sTimer");
 
