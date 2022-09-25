@@ -1,6 +1,7 @@
-const oDate = new Date("Aug 18, 2022 23:00:30").getTime();
+const oDate = new Date("Sep 25, 2022 15:52:30").getTime();
+// Previous longest was 37D 16H
 const sDate = new Date("Sep 20, 2022 00:00:6").getTime();
-const bmDate = new Date("Sep 24, 2022 04:00:00").getTime();
+const bmDate = new Date("Sep 25, 2022 04:00:00").getTime();
 const oTimer = document.querySelector("#oTimer");
 const sTimer = document.querySelector("#sTimer");
 const bmTimer = document.querySelector("#bmTimer");
