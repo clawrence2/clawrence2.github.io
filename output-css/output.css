@@ -516,24 +516,24 @@ video {
   margin-right: 25px;
 }
 
-.mt-\[25px\]{
-  margin-top: 25px;
-}
-
-.mt-\[15px\]{
-  margin-top: 15px;
-}
-
-.mt-\[50px\]{
-  margin-top: 50px;
-}
-
 .mt-\[45px\]{
   margin-top: 45px;
 }
 
 .mt-\[65px\]{
   margin-top: 65px;
+}
+
+.mt-\[15px\]{
+  margin-top: 15px;
+}
+
+.mt-\[25px\]{
+  margin-top: 25px;
+}
+
+.mt-\[50px\]{
+  margin-top: 50px;
 }
 
 .flex{
@@ -586,8 +586,8 @@ video {
   }
 }
 
-.animate-scrollage{
-  animation: scrollage 60s linear infinite;
+.animate-scrollageFast{
+  animation: scrollage 20s linear infinite;
 }
 
 .flex-col{
@@ -620,10 +620,6 @@ video {
 
 .gap-\[5px\]{
   gap: 5px;
-}
-
-.self-start{
-  align-self: flex-start;
 }
 
 .self-center{
@@ -661,19 +657,14 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#808080\]{
+.bg-\[\#f3f3f3\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(128 128 128 / var(--tw-bg-opacity));
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#9EFF00\]{
   --tw-bg-opacity: 1;
   background-color: rgb(158 255 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#f3f3f3\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -737,12 +728,16 @@ video {
   font-size: 16px;
 }
 
-.text-\[48px\]{
-  font-size: 48px;
+.text-\[64px\]{
+  font-size: 64px;
 }
 
 .text-\[24px\]{
   font-size: 24px;
+}
+
+.text-\[48px\]{
+  font-size: 48px;
 }
 
 .text-\[20px\]{
@@ -755,18 +750,6 @@ video {
 
 .text-\[18px\]{
   font-size: 18px;
-}
-
-.text-\[52px\]{
-  font-size: 52px;
-}
-
-.text-\[56px\]{
-  font-size: 56px;
-}
-
-.text-\[64px\]{
-  font-size: 64px;
 }
 
 .font-bold{
@@ -864,12 +847,26 @@ span.size-24 {
     flex-basis: 652px;
   }
 
+  .md\:basis-\[473px\]{
+    flex-basis: 473px;
+  }
+
   .md\:basis-\[550px\]{
     flex-basis: 550px;
   }
 
-  .md\:basis-\[473px\]{
-    flex-basis: 473px;
+  @keyframes scrollage{
+    0%{
+      transform: translateX(0);
+    }
+
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+
+  .md\:animate-scrollage{
+    animation: scrollage 45s linear infinite;
   }
 
   .md\:flex-row{
