@@ -520,16 +520,20 @@ video {
   margin-top: 25px;
 }
 
-.ml-\[25px\]{
-  margin-left: 25px;
+.mt-\[15px\]{
+  margin-top: 15px;
 }
 
 .mt-\[50px\]{
   margin-top: 50px;
 }
 
-.mt-\[15px\]{
-  margin-top: 15px;
+.mt-\[45px\]{
+  margin-top: 45px;
+}
+
+.mt-\[65px\]{
+  margin-top: 65px;
 }
 
 .flex{
@@ -540,12 +544,20 @@ video {
   display: none;
 }
 
-.h-\[56px\]{
-  height: 56px;
+.h-\[24px\]{
+  height: 24px;
+}
+
+.h-\[250px\]{
+  height: 250px;
 }
 
 .w-full{
   width: 100%;
+}
+
+.w-\[396px\]{
+  width: 396px;
 }
 
 .min-w-full{
@@ -554,18 +566,6 @@ video {
 
 .max-w-\[1440px\]{
   max-width: 1440px;
-}
-
-.max-w-\[400px\]{
-  max-width: 400px;
-}
-
-.max-w-\[843px\]{
-  max-width: 843px;
-}
-
-.basis-\[400px\]{
-  flex-basis: 400px;
 }
 
 .basis-\[473px\]{
@@ -618,12 +618,12 @@ video {
   gap: 50px;
 }
 
-.gap-\[25px\]{
-  gap: 25px;
-}
-
 .gap-\[5px\]{
   gap: 5px;
+}
+
+.self-start{
+  align-self: flex-start;
 }
 
 .self-center{
@@ -671,6 +671,21 @@ video {
   background-color: rgb(158 255 0 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f3f3f3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-top{
+  -o-object-position: top;
+     object-position: top;
+}
+
 .p-\[15px\]{
   padding: 15px;
 }
@@ -702,6 +717,10 @@ video {
   padding-bottom: 24px;
 }
 
+.pb-\[15px\]{
+  padding-bottom: 15px;
+}
+
 .pt-\[25px\]{
   padding-top: 25px;
 }
@@ -714,16 +733,16 @@ video {
   font-family: Inter, sans-serif;
 }
 
-.text-\[24px\]{
-  font-size: 24px;
-}
-
-.text-\[145px\]{
-  font-size: 145px;
+.text-\[16px\]{
+  font-size: 16px;
 }
 
 .text-\[48px\]{
   font-size: 48px;
+}
+
+.text-\[24px\]{
+  font-size: 24px;
 }
 
 .text-\[20px\]{
@@ -734,16 +753,32 @@ video {
   font-size: 14px;
 }
 
-.text-\[16px\]{
-  font-size: 16px;
+.text-\[18px\]{
+  font-size: 18px;
+}
+
+.text-\[52px\]{
+  font-size: 52px;
+}
+
+.text-\[56px\]{
+  font-size: 56px;
+}
+
+.text-\[64px\]{
+  font-size: 64px;
 }
 
 .font-bold{
   font-weight: 700;
 }
 
-.leading-\[120px\]{
-  line-height: 120px;
+.leading-\[100\%\]{
+  line-height: 100%;
+}
+
+.leading-\[120\%\]{
+  line-height: 120%;
 }
 
 .leading-\[24px\]{
@@ -752,14 +787,6 @@ video {
 
 .leading-\[48px\]{
   line-height: 48px;
-}
-
-.leading-\[120\%\]{
-  line-height: 120%;
-}
-
-.leading-\[100\%\]{
-  line-height: 100%;
 }
 
 .tracking-tighter{
@@ -789,9 +816,9 @@ video {
   color:#9EFF00;
 }
 
-span.size-34 {
-  font-size: 34px;
-  font-variation-settings: 'OPSZ' 34;
+span.size-24 {
+  font-size: 24px;
+  font-variation-settings: 'OPSZ' 24;
 }
 
 .hover\:text-white:hover{
@@ -800,6 +827,39 @@ span.size-34 {
 }
 
 @media (min-width: 768px){
+  .md\:mx-\[25px\]{
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .md\:ml-\[25px\]{
+    margin-left: 25px;
+  }
+
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+
+  .md\:h-\[56px\]{
+    height: 56px;
+  }
+
+  .md\:h-\[521px\]{
+    height: 521px;
+  }
+
+  .md\:basis-\[400px\]{
+    flex-basis: 400px;
+  }
+
+  .md\:basis-\[900px\]{
+    flex-basis: 900px;
+  }
+
   .md\:basis-\[652px\]{
     flex-basis: 652px;
   }
@@ -808,12 +868,37 @@ span.size-34 {
     flex-basis: 550px;
   }
 
+  .md\:basis-\[473px\]{
+    flex-basis: 473px;
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
 
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
   .md\:gap-\[10px\]{
     gap: 10px;
+  }
+
+  .md\:gap-\[25px\]{
+    gap: 25px;
+  }
+
+  .md\:self-start{
+    align-self: flex-start;
+  }
+
+  .md\:object-center{
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .md\:p-0{
+    padding: 0px;
   }
 
   .md\:p-\[50px\]{
@@ -823,5 +908,33 @@ span.size-34 {
   .md\:px-\[25px\]{
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .md\:text-left{
+    text-align: left;
+  }
+
+  .md\:text-\[24px\]{
+    font-size: 24px;
+  }
+
+  .md\:text-\[96px\]{
+    font-size: 96px;
+  }
+
+  .md\:text-\[48px\]{
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:text-\[120px\]{
+    font-size: 120px;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:text-\[145px\]{
+    font-size: 145px;
   }
 }
