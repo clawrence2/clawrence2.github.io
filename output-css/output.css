@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@300;400&family=Rubik:wght@300;400;500;700&display=swap');
 
 /*
-! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,9 +32,13 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,8 +48,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -117,8 +127,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -127,8 +139,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -187,11 +203,17 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
   /* 1 */
   line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
   /* 1 */
   color: inherit;
   /* 1 */
@@ -216,9 +238,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -338,6 +360,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -412,6 +442,12 @@ video {
   height: auto;
 }
 
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -426,6 +462,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -457,6 +496,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -473,6 +516,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -504,11 +550,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-}
-
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .mx-\[25px\]{
@@ -516,12 +561,9 @@ video {
   margin-right: 25px;
 }
 
-.mt-\[45px\]{
-  margin-top: 45px;
-}
-
-.mt-\[65px\]{
-  margin-top: 65px;
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mt-\[15px\]{
@@ -532,8 +574,16 @@ video {
   margin-top: 25px;
 }
 
+.mt-\[45px\]{
+  margin-top: 45px;
+}
+
 .mt-\[50px\]{
   margin-top: 50px;
+}
+
+.mt-\[65px\]{
+  margin-top: 65px;
 }
 
 .flex{
@@ -544,6 +594,11 @@ video {
   display: none;
 }
 
+.size-24{
+  width: 6rem;
+  height: 6rem;
+}
+
 .h-\[24px\]{
   height: 24px;
 }
@@ -552,12 +607,12 @@ video {
   height: 250px;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-\[396px\]{
   width: 396px;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .min-w-full{
@@ -622,6 +677,10 @@ video {
   gap: 5px;
 }
 
+.gap-\[0px\]{
+  gap: 0px;
+}
+
 .self-center{
   align-self: center;
 }
@@ -647,14 +706,14 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.bg-\[\#9EFF00\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(158 255 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#D9D9D9\]{
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#f3f3f3\]{
@@ -662,9 +721,14 @@ video {
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#9EFF00\]{
+.bg-\[black\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(158 255 0 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -705,16 +769,16 @@ video {
   padding-bottom: 15px;
 }
 
-.pt-\[15px\]{
-  padding-top: 15px;
+.pb-\[15px\]{
+  padding-bottom: 15px;
 }
 
 .pb-\[24px\]{
   padding-bottom: 24px;
 }
 
-.pb-\[15px\]{
-  padding-bottom: 15px;
+.pt-\[15px\]{
+  padding-top: 15px;
 }
 
 .pt-\[25px\]{
@@ -729,12 +793,20 @@ video {
   font-family: Inter, sans-serif;
 }
 
+.text-\[14px\]{
+  font-size: 14px;
+}
+
 .text-\[16px\]{
   font-size: 16px;
 }
 
-.text-\[64px\]{
-  font-size: 64px;
+.text-\[18px\]{
+  font-size: 18px;
+}
+
+.text-\[20px\]{
+  font-size: 20px;
 }
 
 .text-\[24px\]{
@@ -745,16 +817,13 @@ video {
   font-size: 48px;
 }
 
-.text-\[20px\]{
-  font-size: 20px;
+.text-\[64px\]{
+  font-size: 64px;
 }
 
-.text-\[14px\]{
-  font-size: 14px;
-}
-
-.text-\[18px\]{
-  font-size: 18px;
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold{
@@ -769,10 +838,6 @@ video {
   line-height: 120%;
 }
 
-.leading-\[24px\]{
-  line-height: 24px;
-}
-
 .leading-\[48px\]{
   line-height: 48px;
 }
@@ -781,9 +846,9 @@ video {
   letter-spacing: -0.05em;
 }
 
-.text-white{
+.text-\[\#7D7D7D\]{
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(125 125 125 / var(--tw-text-opacity));
 }
 
 .text-\[\#9EFF00\]{
@@ -791,9 +856,9 @@ video {
   color: rgb(158 255 0 / var(--tw-text-opacity));
 }
 
-.text-\[\#7D7D7D\]{
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(125 125 125 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -820,6 +885,10 @@ span.size-24 {
     margin-right: 25px;
   }
 
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+
   .md\:ml-\[25px\]{
     margin-left: 25px;
   }
@@ -828,28 +897,16 @@ span.size-24 {
     margin-top: 0px;
   }
 
-  .md\:ml-0{
-    margin-left: 0px;
+  .md\:h-\[521px\]{
+    height: 521px;
   }
 
   .md\:h-\[56px\]{
     height: 56px;
   }
 
-  .md\:h-\[521px\]{
-    height: 521px;
-  }
-
   .md\:basis-\[400px\]{
     flex-basis: 400px;
-  }
-
-  .md\:basis-\[900px\]{
-    flex-basis: 900px;
-  }
-
-  .md\:basis-\[652px\]{
-    flex-basis: 652px;
   }
 
   .md\:basis-\[473px\]{
@@ -858,6 +915,14 @@ span.size-24 {
 
   .md\:basis-\[550px\]{
     flex-basis: 550px;
+  }
+
+  .md\:basis-\[652px\]{
+    flex-basis: 652px;
+  }
+
+  .md\:basis-\[900px\]{
+    flex-basis: 900px;
   }
 
   @keyframes scrollage{
@@ -920,12 +985,12 @@ span.size-24 {
     font-size: 24px;
   }
 
-  .md\:text-\[96px\]{
-    font-size: 96px;
-  }
-
   .md\:text-\[48px\]{
     font-size: 48px;
+  }
+
+  .md\:text-\[96px\]{
+    font-size: 96px;
   }
 }
 
